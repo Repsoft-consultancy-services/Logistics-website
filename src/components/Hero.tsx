@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { PUBLIC_IMAGES } from "@/lib/images";
 
 export default function Hero() {
   return (
@@ -9,8 +10,8 @@ export default function Hero() {
     >
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80"
-          alt="Warehouse with wooden pallets"
+          src={PUBLIC_IMAGES[0]}
+          alt="Wooden packaging - Kranthi Packing Industries"
           fill
           className="object-cover"
           priority
@@ -42,10 +43,10 @@ export default function Hero() {
             Get in touch
           </Link>
           <Link
-            href="#services"
+            href="/products"
             className="inline-flex items-center justify-center px-6 py-3 rounded-lg border-2 border-wood-400 text-wood-100 font-medium hover:bg-wood-800/50 transition"
           >
-            Our services
+            Our products
           </Link>
         </div>
       </div>

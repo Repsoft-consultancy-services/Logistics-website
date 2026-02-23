@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { PUBLIC_IMAGES } from "@/lib/images";
 
 export default function About() {
   return (
@@ -32,8 +33,8 @@ export default function About() {
           </div>
           <div className="relative rounded-2xl overflow-hidden aspect-[4/3] border border-wood-300/50 shadow-lg">
             <Image
-              src="https://images.unsplash.com/photo-1605745341112-85968b19335b?auto=format&fit=crop&w=800&q=80"
-              alt="Stack of wooden pallets"
+              src={PUBLIC_IMAGES[1]}
+              alt="Kranthi Packing Industries - wooden pallets and packaging"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"

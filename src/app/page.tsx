@@ -1,6 +1,10 @@
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Services from "@/components/Services";
+import ProductsSection from "@/components/ProductsSection";
+import ServicesSection from "@/components/ServicesSection";
+import Certifications from "@/components/Certifications";
+import WhyUs from "@/components/WhyUs";
+import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 
 export default function Home() {
@@ -8,7 +12,11 @@ export default function Home() {
     <>
       <Hero />
       <About />
-      <Services />
+      <ProductsSection />
+      <ServicesSection />
+      <Certifications />
+      <WhyUs />
+      <Testimonials />
       <Contact />
     </>
   );

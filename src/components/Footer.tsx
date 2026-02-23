@@ -62,10 +62,13 @@ export default function Footer() {
             © {new Date().getFullYear()} Kranthi Packing Industries. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link href="#hero" className="text-sm text-wood-400 hover:text-wood-200 transition">
+            <Link href="/" className="text-sm text-wood-400 hover:text-wood-200 transition">
               Home
             </Link>
-            <Link href="#contact" className="text-sm text-wood-400 hover:text-wood-200 transition">
+            <Link href="/products" className="text-sm text-wood-400 hover:text-wood-200 transition">
+              Products
+            </Link>
+            <Link href="/contact" className="text-sm text-wood-400 hover:text-wood-200 transition">
               Contact
             </Link>
           </div>
