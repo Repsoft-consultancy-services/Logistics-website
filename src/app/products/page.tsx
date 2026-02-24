@@ -5,7 +5,7 @@ import { PUBLIC_IMAGES } from "@/lib/images";
 
 export const metadata = {
   title: "Our Products | Wooden Pallets, Boxes & Crates | Kranthi Packing Industries",
-  description: "Wooden pallets, wooden boxes, wooden crates, recycled pallets, and pallet repair. Quality packaging in Hyderabad.",
+  description: "Wooden pallets, wooden boxes, and wooden crates. Quality packaging in Hyderabad.",
 };
 
 export default function ProductsPage() {
@@ -17,7 +17,7 @@ export default function ProductsPage() {
             Our Products
           </h1>
           <p className="mt-3 text-wood-700">
-            Wooden pallets, boxes, crates, recycled pallets, and pallet repair—all from Kranthi Packing Industries, Hyderabad.
+            Wooden pallets, boxes, and crates—all from Kranthi Packing Industries, Hyderabad.
           </p>
         </div>
 

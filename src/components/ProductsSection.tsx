@@ -12,7 +12,7 @@ export default function ProductsSection() {
             Our products
           </h2>
           <p className="mt-3 text-wood-700">
-            The same products we offer: wooden pallets, boxes, crates, recycled pallets, and pallet repair.
+            The same products we offer: wooden pallets, boxes, and crates.
           </p>
         </div>
 

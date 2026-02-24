@@ -24,22 +24,6 @@ export const PRODUCTS = [
     features: ["Fast Dispatch", "Tailored Dimensions", "Premium Quality"],
     cta: "Get a quote",
   },
-  {
-    slug: "recycled-wooden-pallets",
-    title: "Recycled Wooden Pallets",
-    shortDesc: "Eco-friendly recycled wooden pallets at best prices. Ready for use, quality checked, cost-effective.",
-    description: "Eco-friendly recycled wooden pallets at best prices. Ready for use, quality checked, cost-effective. Ideal for domestic use and short-term storage.",
-    features: ["Ready For Use", "Quality Checked", "Cost-Effective"],
-    cta: "Get a quote",
-  },
-  {
-    slug: "pallet-repair",
-    title: "Pallet Repair",
-    shortDesc: "Give your old pallets a new life with our pallet repair services. Quality repairs guaranteed, fast turnaround, save costs.",
-    description: "Pallet care and repair services. Give your old pallets a new life. Quality repairs guaranteed, fast turnaround, save costs.",
-    features: ["Quality Repairs Guaranteed", "Fast Turnaround", "Save Costs"],
-    cta: "Get a quote",
-  },
 ] as const;
 
 export const SERVICES_LIST = [
