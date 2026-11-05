@@ -1,46 +1,21 @@
-import Image from "next/image";
-import { PUBLIC_IMAGES } from "@/lib/images";
+import { SITE } from "@/lib/site";
 
 export default function About() {
   return (
-    <section id="about" className="py-16 sm:py-24 bg-wood-100">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="font-display text-3xl sm:text-4xl font-semibold text-wood-900">
-              About us
-            </h2>
-            <p className="mt-4 text-wood-700 leading-relaxed">
-              Kranthi Packing Industries is your trusted partner for wooden pallets and packaging in Hyderabad. Based in Bowrampet, we manufacture and supply sturdy, reliable pallets tailored to your logistics and storage needs.
-            </p>
-            <p className="mt-4 text-wood-700 leading-relaxed">
-              We focus on quality materials and consistent workmanship so your goods move safely. Whether you need standard pallets or custom packaging solutions, we deliver on time.
-            </p>
-            <ul className="mt-6 space-y-2 text-wood-700">
-              <li className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-wood-500" />
-                Located in Hyderabad, Telangana
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-wood-500" />
-                Quality wood and durable construction
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-wood-500" />
-                Reliable supply for businesses
-              </li>
-            </ul>
-          </div>
-          <div className="relative rounded-2xl overflow-hidden aspect-[4/3] border border-wood-300/50 shadow-lg">
-            <Image
-              src={PUBLIC_IMAGES[1]}
-              alt="Kranthi Packing Industries - wooden pallets and packaging"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
-        </div>
+    <section id="about" className="py-12 sm:py-16">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <h2 className="font-display text-2xl sm:text-3xl font-semibold text-brand-ink text-balance">
+          Durable Packaging Solutions by {SITE.name}
+        </h2>
+        <p className="mt-4 text-brand-muted leading-relaxed">
+          {SITE.name} manufactures and supplies wooden pallets, boxes, and crates in Hyderabad.
+          From our unit in Bowrampet we build packaging for warehouses, logistics, and export dispatch,
+          with sturdy timber and consistent workmanship so goods move safely.
+        </p>
+        <p className="mt-3 text-brand-muted leading-relaxed">
+          Standard sizes and custom packing are both available. Call us for a quote, a bulk order,
+          or onsite packaging at your factory or warehouse.
+        </p>
       </div>
     </section>
   );

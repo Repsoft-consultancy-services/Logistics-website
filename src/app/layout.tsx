@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import { DM_Serif_Display, Source_Sans_3 } from "next/font/google";
+import { Open_Sans, Oswald } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const display = DM_Serif_Display({
-  weight: "400",
+const display = Oswald({
   subsets: ["latin"],
   variable: "--font-display",
 });
 
-const sans = Source_Sans_3({
+const sans = Open_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
@@ -18,7 +17,7 @@ const sans = Source_Sans_3({
 export const metadata: Metadata = {
   title: "Kranthi Packing Industries | Wooden Pallets & Packaging | Hyderabad",
   description:
-    "Quality wooden pallets and packaging solutions in Hyderabad. Kranthi Packing Industries – reliable pallet manufacturing and supply in Bowrampet, Telangana.",
+    "Quality wooden pallets, boxes, and crates in Hyderabad. Kranthi Packing Industries – manufacturing and supply in Bowrampet, Telangana.",
   keywords: "wooden pallets, packaging, Hyderabad, Bowrampet, Kranthi Packing Industries",
 };
 

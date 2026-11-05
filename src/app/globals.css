@@ -2,22 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --wood-50: #faf6f0;
-  --wood-100: #f2e9db;
-  --wood-200: #e4d2b5;
-  --wood-300: #d4b88d;
-  --wood-400: #c49d6a;
-  --wood-500: #b8864d;
-  --wood-600: #a87242;
-  --wood-700: #8b5a38;
-  --wood-800: #714934;
-  --wood-900: #5c3d2e;
-  --wood-950: #311f16;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  @apply bg-wood-50 text-wood-900 antialiased;
+  @apply bg-white text-brand-ink antialiased;
 }
 
 @layer utilities {

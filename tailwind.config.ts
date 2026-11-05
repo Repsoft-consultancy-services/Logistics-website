@@ -9,22 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        wood: {
-          50: "#faf6f0",
-          100: "#f2e9db",
-          200: "#e4d2b5",
-          300: "#d4b88d",
-          400: "#c49d6a",
-          500: "#b8864d",
-          600: "#a87242",
-          700: "#8b5a38",
-          800: "#714934",
-          900: "#5c3d2e",
-          950: "#311f16",
+        brand: {
+          navy: "#3C2A1E",
+          deep: "#2A1C14",
+          blue: "#8E4E22",
+          lime: "#B5682E",
+          orange: "#F3D7A1",
+          ink: "#2B241E",
+          muted: "#5C5148",
+          bar: "#F4EFE6",
+          footer: "#241812",
         },
       },
       fontFamily: {
-        display: ["var(--font-display)", "serif"],
+        display: ["var(--font-display)", "sans-serif"],
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
     },

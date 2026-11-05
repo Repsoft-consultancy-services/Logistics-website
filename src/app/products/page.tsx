@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { PRODUCTS } from "@/lib/products";
 import { PUBLIC_IMAGES } from "@/lib/images";
+import PageBanner from "@/components/PageBanner";
 
 export const metadata = {
   title: "Our Products | Wooden Pallets, Boxes & Crates | Kranthi Packing Industries",
@@ -10,42 +11,35 @@ export const metadata = {
 
 export default function ProductsPage() {
   return (
-    <div className="py-16 sm:py-24">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <h1 className="font-display text-3xl sm:text-4xl font-semibold text-wood-900">
-            Our Products
-          </h1>
-          <p className="mt-3 text-wood-700">
-            Wooden pallets, boxes, and crates—all from Kranthi Packing Industries, Hyderabad.
-          </p>
-        </div>
-
+    <div>
+      <PageBanner
+        title="Products"
+        subtitle="Wooden pallets, boxes, and crates from Kranthi Packing Industries, Hyderabad."
+      />
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {PRODUCTS.map((product, index) => (
             <Link
               key={product.slug}
               href={`/products/${product.slug}`}
-              className="group bg-white rounded-xl border border-wood-200 overflow-hidden shadow-sm hover:shadow-md hover:border-wood-400 transition"
+              className="group border border-[#e6e6e6] bg-white hover:border-brand-navy"
             >
-              <div className="relative aspect-[4/3] bg-wood-100">
+              <div className="relative aspect-[4/3] bg-brand-bar">
                 <Image
                   src={PUBLIC_IMAGES[index % PUBLIC_IMAGES.length]}
                   alt={product.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition duration-300"
+                  className="object-cover"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
-              <div className="p-6">
-                <h2 className="font-display text-xl font-semibold text-wood-900 group-hover:text-wood-700">
+              <div className="p-5">
+                <h2 className="font-display text-xl uppercase text-brand-blue group-hover:text-brand-navy">
                   {product.title}
                 </h2>
-                <p className="mt-2 text-sm text-wood-600 line-clamp-2">
-                  {product.shortDesc}
-                </p>
-                <span className="mt-3 inline-flex items-center text-wood-600 font-medium text-sm group-hover:text-wood-800">
-                  Read more →
+                <p className="mt-2 text-sm text-brand-muted line-clamp-3">{product.shortDesc}</p>
+                <span className="mt-4 inline-block text-sm font-semibold uppercase tracking-wide text-brand-navy">
+                  Read more
                 </span>
               </div>
             </Link>

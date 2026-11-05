@@ -34,3 +34,49 @@ export const SERVICES_LIST = [
   { title: "Palletization Services", desc: "Efficient palletization for load stability, space optimization, and safe transit." },
   { title: "Sawn Timber", desc: "Pine and hardwood cut/sawn to your required sizes for packaging and construction." },
 ] as const;
+
+export const CATALOG = [
+  {
+    title: "Wooden Boxes, Crates & Packing",
+    href: "/products/wooden-boxes",
+    imageIndex: 1,
+    items: [
+      "Wooden Boxes",
+      "Wooden Crates",
+      "Plywood Boxes",
+      "Export Packing Boxes",
+      "Custom Size Boxes",
+      "Heavy Duty Crates",
+      "Domestic Packing Boxes",
+      "Onsite Packing",
+    ],
+  },
+  {
+    title: "Wooden Pallets",
+    href: "/products/wooden-pallets",
+    imageIndex: 0,
+    items: [
+      "Standard Wooden Pallets",
+      "Heavy Duty Pallets",
+      "Two Way Pallets",
+      "Four Way Pallets",
+      "Export Pallets",
+      "Heat-Treated Pallets",
+      "Custom Size Pallets",
+    ],
+  },
+  {
+    title: "Packaging Services",
+    href: "/contact",
+    imageIndex: 3,
+    items: [
+      "Export Packing",
+      "Domestic Packaging",
+      "Onsite Packaging",
+      "Heat Treatment",
+      "Fumigation",
+      "Palletization",
+      "Sawn Timber",
+    ],
+  },
+] as const;

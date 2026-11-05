@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { PRODUCTS } from "@/lib/products";
 import { PUBLIC_IMAGES } from "@/lib/images";
+import PageBanner from "@/components/PageBanner";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -28,17 +29,14 @@ export default async function ProductPage({ params }: Props) {
   const imageIndex = PRODUCTS.indexOf(product) % PUBLIC_IMAGES.length;
 
   return (
-    <div className="py-12 sm:py-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        <Link
-          href="/products"
-          className="text-wood-600 hover:text-wood-800 text-sm font-medium mb-8 inline-block"
-        >
-          ← All products
+    <div>
+      <PageBanner title={product.title} subtitle={product.shortDesc} />
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
+        <Link href="/products" className="text-sm font-semibold uppercase tracking-wide text-brand-blue hover:text-brand-navy">
+          All products
         </Link>
-
-        <div className="grid md:grid-cols-2 gap-10 items-start">
-          <div className="relative aspect-[4/3] rounded-xl overflow-hidden border border-wood-200 shadow-lg">
+        <div className="mt-6 grid md:grid-cols-2 gap-10 items-start">
+          <div className="relative aspect-[4/3] overflow-hidden border border-[#e6e6e6]">
             <Image
               src={PUBLIC_IMAGES[imageIndex]}
               alt={product.title}
@@ -49,23 +47,18 @@ export default async function ProductPage({ params }: Props) {
             />
           </div>
           <div>
-            <h1 className="font-display text-3xl sm:text-4xl font-semibold text-wood-900">
-              {product.title}
-            </h1>
-            <p className="mt-4 text-wood-700 leading-relaxed">
-              {product.description}
-            </p>
+            <p className="text-brand-muted leading-relaxed">{product.description}</p>
             <ul className="mt-6 space-y-2">
-              {product.features.map((f) => (
-                <li key={f} className="flex items-center gap-2 text-wood-700">
-                  <span className="w-2 h-2 rounded-full bg-wood-500 shrink-0" />
-                  {f}
+              {product.features.map((feature) => (
+                <li key={feature} className="flex items-center gap-2 text-brand-ink">
+                  <span className="h-2 w-2 bg-brand-lime shrink-0" />
+                  {feature}
                 </li>
               ))}
             </ul>
             <Link
               href="/contact"
-              className="mt-8 inline-flex items-center justify-center px-6 py-3 rounded-lg bg-wood-600 text-white font-medium hover:bg-wood-700 transition"
+              className="mt-8 inline-flex items-center justify-center bg-brand-lime px-6 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-white hover:bg-[#8E4E22]"
             >
               {product.cta}
             </Link>

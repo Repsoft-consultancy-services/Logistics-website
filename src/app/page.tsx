@@ -1,23 +1,24 @@
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import ProductsSection from "@/components/ProductsSection";
 import ServicesSection from "@/components/ServicesSection";
-import Certifications from "@/components/Certifications";
-import WhyUs from "@/components/WhyUs";
-import Testimonials from "@/components/Testimonials";
-import Contact from "@/components/Contact";
+import Enquiry from "@/components/Enquiry";
+import ProductsSection from "@/components/ProductsSection";
+import Gallery from "@/components/Gallery";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <About />
-      <ProductsSection />
       <ServicesSection />
-      <Certifications />
-      <WhyUs />
-      <Testimonials />
-      <Contact />
+      <Enquiry />
+      <ProductsSection />
+      <section className="bg-brand-bar">
+        <p className="max-w-6xl mx-auto px-4 py-8 text-center font-display text-xl sm:text-2xl uppercase tracking-wide text-brand-ink">
+          Services you can trust, quality you can afford
+        </p>
+      </section>
+      <Gallery />
     </>
   );
 }
